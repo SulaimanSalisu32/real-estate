@@ -1,0 +1,15 @@
+{
+  "name": "real-estate-platform",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.9.1",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @nest-app/api --filter @nest-app/web run dev",
+    "build": "pnpm --recursive build",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --filter @nest-app/api test",
+    "test:e2e": "pnpm --filter @nest-app/api test:e2e",
+    "seed": "pnpm --filter @nest-app/api seed",
+    "create-admin": "pnpm --filter @nest-app/api create-admin"
+  }
+}

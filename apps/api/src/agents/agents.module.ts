@@ -1,0 +1,17 @@
+import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from '../auth/auth.module';
+import { Agent, AgentSchema } from './schemas/agent.schema';
+import { AgentsController } from './agents.controller';
+import { AgentsService } from './agents.service';
+
+@Module({
+  imports: [
+    AuthModule,
+    MongooseModule.forFeature([{ name: Agent.name, schema: AgentSchema }]),
+  ],
+  controllers: [AgentsController],
+  providers: [AgentsService],
+  exports: [AgentsService],
+})
+export class AgentsModule {}

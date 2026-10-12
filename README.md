@@ -248,3 +248,5 @@ The API assigns an inquiry to the listing's agent. Inquiry status can be `new`,
 
 The API currently has no authentication or authorization. Add access controls
 before exposing management endpoints publicly.
+#   L M S  
+ 
